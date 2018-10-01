@@ -1,2 +1,1 @@
-# JavaScript-
-学习JavaScript数据结构与算法
+# 学习JavaScript数据结构与算法
