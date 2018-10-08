@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    // 需求： 为数组 arr 中的每个元素求二次方。不要直接修改数组 arr，结果返回新的数组
+    function square(arr) {
+      return arr.map(function (item, index, array) {
+        return item * item;
+      })
+    }
+  </script>
+</body>
+
+</html>
