@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    function Stack() {
+      let items = []; 
+      this.push = function (element) { //入栈：添加一个新元素到栈项（栈的末尾）
+        items.push(element);
+      };
+      this.pop = function () { //出栈：移除栈项的元素，返回被移除的元素
+        return items.pop();
+      };
+      this.peek = function () { //返回栈项的元素，不对栈做任何修改
+        return items[items.length - 1];
+      };
+      this.isEmpty = function () { //如果栈为空返回true，判断内部数组的长度是否为0
+        return items.length == 0;
+      };
+      this.size = function () { //类似数组的length属性,返回栈的长度
+        return items.length;
+      };
+      this.clear = function () { //移除栈里的所有元素
+        items = [];
+      };
+      this.print = function () { //把栈里的元素都输出到控制台
+        console.log(items.toString());
+      };
+    }
+
+    let stack = new Stack();
+    console.log(stack.isEmpty());//true
+
+    stack.push(5);
+    stack.push(8);
+    console.log(stack.peek());//8
+    stack.push(11);
+    console.log(stack.size());//3
+    console.log(stack.isEmpty());//false
+    stack.push(15);
+    stack.pop();
+    stack.pop();
+    console.log(stack.size());//2
+    stack.print();//5,8
+  </script>
+</body>
+
+</html>
