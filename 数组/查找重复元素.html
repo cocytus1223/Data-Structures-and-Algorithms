@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+</head>
+
+<body>
+
+  <script>
+    // 需求：找出数组 arr 中重复出现过的元素
+    function duplicates(arr) {
+      var result = [];
+      arr.forEach(function (elem) {
+        if (arr.indexOf(elem) != arr.lastIndexOf(elem) && result.indexOf(elem) == -1) {
+          result.push(elem);
+        }
+      });
+      return result;
+    }
+
+    //先排序，如果后一个与前一个相等且未保存，则保存。
+    function duplicates(arr) {
+      var a = arr.sort(),
+        b = [];
+      for (var i in a) {
+        if (a[i] == a[i - 1] && b.indexOf(a[i]) == -1) b.push(a[i]);
+      }
+      return b;
+    }
+  </script>
+
+</body>
+
+</html>
